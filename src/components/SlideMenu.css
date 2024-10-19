@@ -1,0 +1,81 @@
+.slideMenu{
+    width: 20%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.slideMenu .logo {
+    font-family: 'Bauhaus 93';
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.slideMenu .nav{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+    font-size: 15px;
+}
+
+.slideMenu .social {
+    position: absolute;
+    bottom: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 5px;
+    transition: 0.5s;
+}
+
+.slideMenu .social li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.slideMenu .social li a:hover {
+    color: var(--second);
+} 
+
+.slideMenu.active{
+    width: 7%;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+
+.slideMenu.active .brand,
+.slideMenu.active .navName {
+    display: none;
+}
+
+.slideMenu.active .nav li a {
+    font-size: 1.8rem;
+}
+
+.slideMenu.active .social {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
